@@ -1,8 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sign_Up.css';
 
 const SignUp = () => {
+  const [phone, setPhone] = useState('');
+  const [phoneError, setPhoneError] = useState('');
+
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+
+    // Allow only numbers
+    if (/^\d*$/.test(value)) {
+      setPhone(value);
+
+      if (value.length !== 10 && value.length > 0) {
+        setPhoneError('Phone number must be exactly 10 digits');
+      } else {
+        setPhoneError('');
+      }
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (phone.length !== 10) {
+      setPhoneError('Phone number must be exactly 10 digits');
+      return;
+    }
+
+    // Proceed with form submission (e.g. API call)
+    alert('Form submitted successfully!');
+  };
+
   return (
     <div className="container" style={{ marginTop: '5%' }}>
       <div className="signup-grid">
@@ -18,7 +48,7 @@ const SignUp = () => {
           </span>
         </div>
         <div className="signup-form">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -40,9 +70,13 @@ const SignUp = () => {
                 id="phone"
                 required
                 className="form-control"
-                placeholder="Enter your phone number"
+                placeholder="Enter 10-digit phone number"
                 aria-describedby="helpId"
+                value={phone}
+                onChange={handlePhoneChange}
+                maxLength={10}
               />
+              {phoneError && <small style={{ color: 'red' }}>{phoneError}</small>}
             </div>
 
             <div className="form-group">
