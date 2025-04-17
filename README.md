@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+🏥 Medical Appointment Website
+Welcome to the Medical Appointment Website – a full-stack web application designed to simplify the process of booking, managing, and tracking medical appointments for both patients and healthcare providers.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+📌 Project Overview
+This platform provides a user-friendly interface for patients to:
 
-## Available Scripts
+Register and log in securely
 
-In the project directory, you can run:
+Search for doctors by specialty, location, or availability
 
-### `npm start`
+Book, reschedule, or cancel appointments
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Receive email or SMS reminders
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For doctors and admins:
 
-### `npm test`
+Manage availability and appointment slots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+View and manage patient bookings
 
-### `npm run build`
+Securely access patient profiles and history (with proper authorization)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Admin dashboard for system oversight and user management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+💻 Tech Stack
+Frontend:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+HTML5, CSS3, JavaScript (React or Vue depending on setup)
 
-### `npm run eject`
+Tailwind CSS / Bootstrap for styling
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Axios for HTTP requests
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Backend:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Node.js with Express.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+MongoDB / PostgreSQL for database
 
-## Learn More
+JWT for authentication and role-based access control
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Nodemailer / Twilio for notifications
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🚀 Getting Started
+Clone the repository:
 
-### Code Splitting
+git clone https://github.com/fsangregorio/grihf-frontend_capstone_starter_code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Install dependencies:
 
-### Analyzing the Bundle Size
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Set up environment variables (see .env.example):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+DB_URI=
+JWT_SECRET=
+EMAIL_SERVICE_API_KEY=
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Run the application:
 
-### Deployment
+npm run dev
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Visit the app in your browser:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+http://localhost:3000
+
+
+✅ Features
+Secure authentication and role-based access
+
+Fully responsive UI
+
+Real-time appointment scheduling
+
+Doctor search and filtering system
+
+Notification system (email/SMS)
+
+Admin dashboard
+
+🔐 Security & Compliance
+This project is developed with best practices for handling sensitive health information, including:
+
+HTTPS and secure API routes
+
+Encrypted data storage
+
+GDPR/HIPAA-aware design principles (custom implementation required per organization)
+
+📄 License
+This project is open-source and available under the MIT License.
